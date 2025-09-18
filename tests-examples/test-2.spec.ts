@@ -1,0 +1,35 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://apply.mykaleidoscope.com/login');
+  await page.getByRole('textbox', { name: 'Email Address' }).click();
+  await page.getByRole('textbox', { name: 'Email Address' }).click();
+  await page.getByRole('textbox', { name: 'Email Address' }).click();
+  await page.getByRole('textbox', { name: 'Email Address' }).fill('pumkum@gmail.com');
+  await page.getByRole('button', { name: 'Next' }).click();
+  await page.getByRole('textbox', { name: 'First Name' }).click();
+  await page.getByRole('textbox', { name: 'First Name' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'First Name' }).fill('P');
+  await page.getByRole('textbox', { name: 'First Name' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'First Name' }).fill('Pummy');
+  await page.getByRole('textbox', { name: 'Last Name' }).click();
+  await page.getByRole('textbox', { name: 'Last Name' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Last Name' }).fill('K');
+  await page.getByRole('textbox', { name: 'Last Name' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Last Name' }).fill('Kumari');
+  await page.getByRole('button', { name: 'United States: +' }).click();
+  await page.getByRole('option', { name: 'India+' }).click();
+  await page.getByRole('textbox', { name: '1 (702) 123-' }).click();
+  await page.getByRole('textbox', { name: '1 (702) 123-' }).click();
+  await page.getByRole('textbox', { name: '1 (702) 123-' }).fill('+91 89177-99832');
+  await page.getByRole('textbox', { name: 'Create a Password' }).click();
+  await page.getByRole('textbox', { name: 'Create a Password' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Create a Password' }).fill('P');
+  await page.getByRole('textbox', { name: 'Create a Password' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Create a Password' }).fill('Pummy@123');
+  await page.getByRole('textbox', { name: 'Create a Password' }).click();
+  await page.getByRole('textbox', { name: 'Create a Password' }).fill('Pummy@12345678');
+  await page.getByRole('checkbox', { name: 'I confirm that I am at least' }).check();
+  await page.getByRole('button', { name: 'Submit' }).click();
+  await page.goto('https://apply.mykaleidoscope.com/applicant/applications');
+});

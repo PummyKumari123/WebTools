@@ -1,0 +1,13 @@
+{
+  "name": "webautomationtool",
+  "version": "1.0.0",
+  "description": "learn webautomation tool",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Pummy",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.5.2"
+  }
+}
